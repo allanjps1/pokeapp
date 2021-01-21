@@ -5,12 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { PokemonCardComponent } from './pokemon-card/pokemon-card.component';
+import { PokemonFilterComponent } from './pokemon-filter/pokemon-filter.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ConfigService } from './config/config.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MatCardModule} from '@angular/material/card';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatOptionModule } from '@angular/material/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,19 +23,26 @@ import {MatGridListModule} from '@angular/material/grid-list';
     AppComponent,
     PokemonListComponent,
     PokemonCardComponent,
+    PokemonFilterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatAutocompleteModule,
+    MatFormFieldModule,
+    MatOptionModule,
   ],
   providers: [
-    { provide: APP_INITIALIZER,
+    {
+      provide: APP_INITIALIZER,
       useFactory: (configService: ConfigService) => () => configService.getConfig(),
-      deps: [ConfigService], 
+      deps: [ConfigService],
       multi: true
     }
   ],

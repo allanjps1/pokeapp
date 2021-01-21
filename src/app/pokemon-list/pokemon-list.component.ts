@@ -20,4 +20,8 @@ export class PokemonListComponent implements OnInit {
     this.pokemons = this._pokeService.pokemonList;
   }
 
+  updatePokemonsList(value: any){
+    this.pokemons = value;
+  }
+
 }
