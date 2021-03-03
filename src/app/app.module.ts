@@ -11,12 +11,8 @@ import { ConfigService } from './config/config.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatCardModule } from '@angular/material/card';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatOptionModule } from '@angular/material/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -33,10 +29,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     FormsModule,
     MatCardModule,
-    MatGridListModule,
-    MatAutocompleteModule,
-    MatFormFieldModule,
-    MatOptionModule,
+    MatInputModule
   ],
   providers: [
     {
@@ -44,7 +37,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
       useFactory: (configService: ConfigService) => () => configService.getConfig(),
       deps: [ConfigService],
       multi: true
-    }
+    },
   ],
   bootstrap: [AppComponent]
 })

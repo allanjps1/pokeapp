@@ -1,8 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { Pokemon } from '../entitys/pokemon';
-import { map, startWith } from 'rxjs/operators';
 import { PokemonServiceService } from '../services/pokemon-service.service';
 
 @Component({
@@ -10,6 +9,7 @@ import { PokemonServiceService } from '../services/pokemon-service.service';
   templateUrl: './pokemon-filter.component.html',
   styleUrls: ['./pokemon-filter.component.css']
 })
+
 export class PokemonFilterComponent implements OnInit {
 
   constructor(private _pokeService: PokemonServiceService) { }
@@ -37,7 +37,5 @@ export class PokemonFilterComponent implements OnInit {
     const filterValue = value.toLowerCase();
 
     return this._pokeService.pokemonList.filter(option => option.name?.toLowerCase().indexOf(filterValue) === 0);
-
-    //return this.pokeList.filter(option => option.name?.toLowerCase().indexOf(filterValue) === 0);
   }
 }
