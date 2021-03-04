@@ -12,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {MatInputModule} from '@angular/material/input';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
   declarations: [
@@ -29,7 +29,7 @@ import {MatInputModule} from '@angular/material/input';
     ReactiveFormsModule,
     FormsModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
   ],
   providers: [
     {
