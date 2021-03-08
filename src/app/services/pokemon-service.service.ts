@@ -33,6 +33,7 @@ export class PokemonServiceService {
           that.getPokemonIdByUrl(element.url).then((a: any) => {
             pokemon.id = a.id;
             pokemon.photo = `${this.config.configuration?.frontPokemonImageUrl}${a.id}.png`;
+            pokemon.thumb = `${this.config.configuration?.thumbPokemonImageUrl}${a.id}.png`
           });
 
           this.pokemonList.push(pokemon);

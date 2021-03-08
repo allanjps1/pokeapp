@@ -1,7 +1,7 @@
-<mat-card style="height: 250px; width: 250px; text-align: center; background-color: #F2F2F2">
-    <mat-card-header>
-        <mat-card-title>{{pokemon.name}}</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image style="position: center; width: 180px; height: 180px;" src="{{pokemon.photo}}"
-        alt="{{pokemon.name}}">
-</mat-card>
+<li style="height: 250px; width: 250px; background-color: #F2F2F2; align-items: center; border-radius: 0.5em;">
+    <img class="poke-img" mat-card-image src="{{pokemon.photo}}" alt="{{pokemon.name}}">
+    <div class="poke-info">
+        <p class="poke-number">Nº {{pokemon.id | padStart}}</p>
+        <h5></h5>
+    </div>
+</li>

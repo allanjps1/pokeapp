@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { PadStartPipe } from './shared/pipes/padStart.pipe';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MatInputModule } from '@angular/material/input';
     PokemonListComponent,
     PokemonCardComponent,
     PokemonFilterComponent,
+    PadStartPipe
   ],
   imports: [
     BrowserModule,

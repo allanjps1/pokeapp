@@ -1,3 +1,26 @@
-img:hover{
-    margin-top: 5px;
+.poke-img {
+    width: 150px;
+    height: 150px;
+    margin-left: 40px;
+}
+
+.poke-img:hover {
+    margin-top: 1px;
+}
+
+.poke-info {
+    background-color: white;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    height: 20%;
+    padding-left: 3.7%;
+    top:33px;
+}
+
+.poke-number {
+    font-family: "Flexo-Bold",arial,sans-serif;
+    color: #919191;
+    font-size: 80%;
+    padding-top: 2px;
 }

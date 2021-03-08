@@ -1,5 +1,5 @@
 <app-pokemon-filter [pokeList]="pokemons" (filteredList)="updatePokemonsList($event)"></app-pokemon-filter>
 
-<div class="container">
+<ul class="container">
     <app-pokemon-card style="margin: 1em;" *ngFor="let pokemon of pokemons;" [pokemon]="pokemon"></app-pokemon-card>
-</div>
+</ul>
