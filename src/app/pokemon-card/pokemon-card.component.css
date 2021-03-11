@@ -13,14 +13,20 @@
     position: relative;
     bottom: 0;
     left: 0;
-    height: 20%;
+    height: 25%;
     padding-left: 3.7%;
-    top:33px;
+    top: 33px;
+    display: flex;
+    flex-direction: column;
 }
 
 .poke-number {
-    font-family: "Flexo-Bold",arial,sans-serif;
+    font-family: arial, sans-serif;
     color: #919191;
     font-size: 80%;
     padding-top: 2px;
+}
+
+h4::first-letter {
+    text-transform: uppercase;
 }
