@@ -37,7 +37,7 @@ export class PokemonServiceService {
           });
 
           this.pokemonList.push(pokemon);
-          
+
         });
 
         return this.pokemonList;

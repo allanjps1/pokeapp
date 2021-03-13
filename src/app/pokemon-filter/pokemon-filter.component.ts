@@ -36,6 +36,6 @@ export class PokemonFilterComponent implements OnInit {
   private _filter(value: string): Pokemon[] {
     const filterValue = value.toLowerCase();
 
-    return this._pokeService.pokemonList.filter(option => option.name?.toLowerCase().indexOf(filterValue) === 0);
+    return this._pokeService.pokemonList.filter(option => option.name?.indexOf(filterValue) === 0 || option.id === Number(value));
   }
 }

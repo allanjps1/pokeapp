@@ -1,3 +1,6 @@
-<form [formGroup]="formPokeFilter">
-  <input type="text" formControlName="filtro">
+<form  [formGroup]="formPokeFilter">
+  <mat-form-field class="example-full-width">
+    <mat-label>Search Pokémon</mat-label>
+    <input matInput formControlName="filtro" placeholder="Ex. Bulbasaur">
+  </mat-form-field>
 </form>
